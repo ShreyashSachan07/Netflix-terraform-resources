@@ -4,7 +4,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "terraform-resource-remote-state-1092"
+    bucket = "remote-state-terraform-resources"
     key = "eks/eks.tfstate"
     region = "ap-south-1"
   }
@@ -15,7 +15,7 @@ data "aws_caller_identity" "current" {}
 data "terraform_remote_state" "vpc" {
   backend  = "s3"
   config   = {
-    bucket = "terraform-resource-remote-state-1092"
+    bucket = "remote-state-terraform-resources"
     key    = "vpc/vpc.tfstate"
     region = "ap-south-1"
   }

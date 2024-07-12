@@ -1,19 +1,19 @@
 
 variable "vpc_cidr" {
-  default     = "10.0.0.0/16"
+  default     = ""
   description = "default CIDR range of the VPC"
 }
 variable "aws_region" {
-  default = "ap-south-1"
+  default = ""
   description = "aws region"
 }
 
 variable "private_subnets" {
-  default = ["10.0.1.0/24", "10.0.2.0/24"]
+  default = ""
   description = "Private Subnets CIDR range"
 }
 
 variable "public_subnets" {
-  default = ["10.0.4.0/24", "10.0.5.0/24"]
+  default = ""
   description = "Public Subnets CIDR range"
 }

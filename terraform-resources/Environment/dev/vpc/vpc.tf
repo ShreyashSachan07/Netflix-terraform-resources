@@ -5,7 +5,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "terraform-resource-remote-state-1092"
+    bucket = "remote-state-terraform-resources"
     key = "vpc/vpc.tfstate"
     region = "ap-south-1"
   }
@@ -14,7 +14,7 @@ terraform {
 data "aws_caller_identity" "current" {}
 
 data "aws_availability_zones" "available" {}
-/*
+
 locals {
   cluster_name = "demo-eks-${random_string.suffix.result}"
 }
@@ -23,7 +23,7 @@ resource "random_string" "suffix" {
   length  = 8
   special = false
 }
-*/
+
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "5.7.0"
