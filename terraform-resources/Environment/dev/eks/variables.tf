@@ -1,37 +1,37 @@
 variable "kubernetes_version" {
-  default     = 1.27
+  default     = ""
   description = "kubernetes version"
 }
 
 variable "aws_region" {
-  default = "ap-south-1"
+  default = ""
   description = "aws region"
 }
 
 variable "ami_type" {
-  default = "AL2_x86_64"
+  default = ""
   description = "AMI Type"
   
 }
 
 variable "instance_types" {
-  default = ["t3.medium"]
+  default = ""
   description = "Instance type"
   
 }
 
 variable "min_size" {
-  default = "2"
+  default = ""
   description = "Minimume size of worker nodes"
 }
 
 variable "max_size" {
-  default = "4"
+  default = ""
   description = "Maximum size of worker nodes"
 }
 
 variable "desired_size" {
-  default = "2"
+  default = ""
   description = "Desired size of worker nodes"
   
 }
